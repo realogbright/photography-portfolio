@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Photography Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>My Photography Portfolio</h1>
+    <a href="changelog.html" class="back-button">Changelog</a>
+  </header>
+
+  <div id="album-container">
+    <div class="album" onclick="openAlbum('nature')">
+      <img src="albums/nature/P1011037.jpg" alt="Nature Cover">
+      <div class="caption">
+        <span>Nature</span>
+        <span>April 2025</span>
+      </div>
+    </div>
+    <div class="album" onclick="openAlbum('city')">
+      <img src="albums/city/P1011119.jpg" alt="City Cover">
+      <div class="caption">
+        <span>City</span>
+        <span>May 2025</span>
+      </div>
+    </div>
+    <div class="album" onclick="openAlbum('vegas')">
+      <img src="albums/vegas/IMG_4849.jpg" alt="Vegas Cover">
+      <div class="caption">
+        <span>Vegas</span>
+        <span>June 2019</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="photo-view" style="display: none;">
+    <button class="back-button" onclick="goBack()">← Back to Albums</button>
+    <div id="photo-grid"></div>
+  </div>
+
+  <div id="lightbox" style="display: none;">
+    <button class="arrow-btn left">❮</button>
+    <div class="photo-viewer">
+      <img id="lightbox-img" src="" alt="Selected Photo">
+      <div class="photo-info">
+        <h3>Photo Details</h3>
+        <p>ISO: <span id="meta-iso">-</span></p>
+        <p>Aperture: <span id="meta-aperture">-</span></p>
+        <p>Shutter Speed: <span id="meta-shutter">-</span></p>
+        <p>Camera: <span id="meta-camera">-</span></p>
+        <p>Lens: <span id="meta-lens">-</span></p>
+        <button onclick="closeLightbox()">Close</button>
+      </div>
+    </div>
+    <button class="arrow-btn right">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

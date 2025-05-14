@@ -1,0 +1,334 @@
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Mono";
+  src: url("fonts/roboto-mono.woff2");
+}
+
+::selection {
+  background-color: #eee;
+  color: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #111;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Mono", monospace;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding: 30px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  #album-container {
+    grid-template-columns: 1fr;
+  }
+  #photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 35px;
+  line-height: 2;
+}
+
+a {
+  color: #f44;
+  outline: 0;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+#album-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+}
+
+#album-container img {
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border: none; /* Ensure no border on image itself */
+}
+
+#album-container img:hover {
+  transform: none;
+}
+
+.album {
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  border: solid 5px #eee; /* Border on album container */
+  background-color: #222;
+  transition: transform 0.2s, border-color 0.2s;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.album:hover {
+  transform: scale(1.03);
+  border: solid 5px #eee; /* Explicitly maintain border on hover */
+}
+
+.album img {
+  width: 100%;
+  display: block;
+}
+
+.album .caption {
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+  right: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #333;
+  border: solid 3px #eee;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+#photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  #photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#photo-grid img.preview-img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  transition: transform 0.3s;
+  cursor: pointer;
+  border: solid 5px #eee;
+}
+
+#photo-grid img.preview-img:hover {
+  transform: scale(1.05);
+}
+
+#photo-grid img.landscape {
+  aspect-ratio: 3/2;
+}
+
+#photo-grid img.portrait {
+  aspect-ratio: 2/3;
+}
+
+.back-button {
+  background-color: #292929;
+  border: solid 5px #eee;
+  color: #eee;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px 15px;
+  transition: all 0.1s;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background-color: #610000;
+  border-color: #ff7c7c;
+  color: #f44;
+}
+
+.back-button:active {
+  transform: translateY(2px);
+}
+
+#lightbox {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: row;
+}
+
+.photo-viewer {
+  display: flex;
+  gap: 30px;
+  max-width: 90%;
+  max-height: 90%;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#lightbox-img {
+  max-width: 60vw;
+  max-height: 80vh;
+  border: solid 5px #eee;
+  object-fit: contain;
+}
+
+.photo-info {
+  max-width: 300px;
+  padding: 20px;
+  border: 3px solid #eee;
+  background-color: #222;
+  color: #eee;
+  font-size: 0.95em;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.photo-info p {
+  font-weight: bold;
+}
+
+.photo-info button {
+  background-color: #292929;
+  border: solid 3px #eee;
+  color: #eee;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.photo-info button:hover {
+  background-color: #610000;
+  border-color: #ff7c7c;
+  color: #f44;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.arrow-btn.left {
+  left: 20px;
+}
+
+.arrow-btn.right {
+  right: 20px;
+}
+
+.arrow-btn:hover {
+  color: #f44;
+}
+
+/* Additions for border fix and changelog */
+.album:hover {
+  border: solid 5px #eee; /* Change border color on hover */
+}
+
+.changelog-container {
+  background-color: #222;
+  border: solid 5px #eee;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.changelog-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: solid 3px #eee;
+  padding-bottom: 5px;
+}
+
+.changelog-entry {
+  margin-bottom: 20px;
+}
+
+.changelog-entry h3 {
+  font-size: 1.2em;
+  color: #f44;
+  margin-bottom: 10px;
+}
+
+.changelog-entry ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.changelog-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.changelog-container li {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+@media only screen and (max-width: 600px) {
+  .changelog-container {
+    padding: 15px;
+  }
+  .changelog-container h2 {
+    font-size: 1.3em;
+  }
+  .changelog-entry h3 {
+    font-size: 1.1em;
+  }
+}
