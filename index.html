@@ -9,10 +9,24 @@
 <body>
   <header>
     <h1>My Photography Portfolio</h1>
-    <a href="changelog.html" class="back-button">Changelog</a>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="changelog.html" class="back-button">Changelog</a>
+      <a href="gear.html" class="back-button">View Gear</a>
   </header>
 
+
   <div id="album-container">
+
+    <!-- Album: Classy -->
+    <div class="album" onclick="openAlbum('classy')">
+      <img src="albums/classy/P1011357.jpg" alt="Classy Cover">
+      <div class="caption">
+        <span>Classy</span>
+        <span>May 2025</span>
+      </div>
+    </div>
+
+  <!-- Album: Nature -->
     <div class="album" onclick="openAlbum('nature')">
       <img src="albums/nature/P1011037.jpg" alt="Nature Cover">
       <div class="caption">
@@ -20,6 +34,8 @@
         <span>April 2025</span>
       </div>
     </div>
+
+    <!-- Album: City -->
     <div class="album" onclick="openAlbum('city')">
       <img src="albums/city/P1011119.jpg" alt="City Cover">
       <div class="caption">
@@ -27,6 +43,8 @@
         <span>May 2025</span>
       </div>
     </div>
+
+    <!-- Album: Vegas -->
     <div class="album" onclick="openAlbum('vegas')">
       <img src="albums/vegas/IMG_4849.jpg" alt="Vegas Cover">
       <div class="caption">
@@ -34,7 +52,8 @@
         <span>June 2019</span>
       </div>
     </div>
-  </div>
+  
+  </div> <!-- this is the ONLY closing div for #album-container -->
 
   <div id="photo-view" style="display: none;">
     <button class="back-button" onclick="goBack()">← Back to Albums</button>
