@@ -1,0 +1,73 @@
+======== P1011338.jpg
+ISO                             : 1000
+F Number                        : 5.6
+Exposure Time                   : 1/500
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011341.jpg
+ISO                             : 1600
+F Number                        : 5.6
+Exposure Time                   : 1/500
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011350.jpg
+ISO                             : 125
+F Number                        : 7.1
+Exposure Time                   : 1/60
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011351.jpg
+ISO                             : 100
+F Number                        : 7.1
+Exposure Time                   : 1/60
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011353.jpg
+ISO                             : 100
+F Number                        : 7.1
+Exposure Time                   : 1/60
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011355.jpg
+ISO                             : 100
+F Number                        : 5.4
+Exposure Time                   : 1/80
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011356.jpg
+ISO                             : 100
+F Number                        : 4.3
+Exposure Time                   : 1/80
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011357.jpg
+ISO                             : 160
+F Number                        : 3.5
+Exposure Time                   : 1/250
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011376.jpg
+ISO                             : 800
+F Number                        : 5.2
+Exposure Time                   : 1/160
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011378.jpg
+ISO                             : 500
+F Number                        : 4.9
+Exposure Time                   : 1/160
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011383.jpg
+ISO                             : 160
+F Number                        : 5.6
+Exposure Time                   : 1/60
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+======== P1011388.jpg
+ISO                             : 100
+F Number                        : 7.1
+Exposure Time                   : 1/50
+Camera Model Name               : DC-S5M2
+Lens Model                      : LUMIX S 20-60/F3.5-5.6
+   12 image files read
